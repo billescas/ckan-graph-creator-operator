@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="ckan-graph-creator-operator" version="1.0.0">
+  <details>
+    <title>CKAN Graph creator</title>
+    <authors>Aitor Magán &lt;amagan@conwet.com&gt;</authors>
+    <email>wirecloud@conwet.com</email>
+    <description>A widget that allow a user what information to show in a linear graph</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <homepage>https://github.com/wirecloud-fiware/ckan-graph-creator-operator</homepage>
+    <doc>doc/index.html</doc>
+    <changelog>doc/changelog.md</changelog>
+  </details>
+  <preferences>
+    <preference name="graph_type" type="text" description="Graph type" label="Graph type" default="linechart"/>
+    <preference name="graph_series" type="text" label="Series" description="The data series that will be displayed in the graph"/>
+    <preference name="graph_fields" type="text" description="Fields for the graph configuration. Depends on graph type." label="Fields"/>
+  </preferences>
+  <wiring>
+    <outputendpoint name="flotr2-graph-config" type="text" label="Flotr2 Configuration" description="The configuration of your flotr2 graph" friendcode="flotr2-graph-data" />
+    <outputendpoint name="googlecharts-graph-config" type="text" label="Google Charts Configuration" description="The configuration of your Google Charts graph" friendcode="google-charts-data" />
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+  </wiring>
+  <scripts>
+    <script src="js/graphcreator.js"/>
+    <script src="js/main.js"/>
+  </scripts>
+</operator>

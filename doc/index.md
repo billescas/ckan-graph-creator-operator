@@ -1,0 +1,2 @@
+CKAN Graph Creator Widget
+=========================

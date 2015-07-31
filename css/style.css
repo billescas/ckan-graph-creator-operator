@@ -1,0 +1,31 @@
+.container-basicgraphs {
+  display: block;
+  padding: 10px 5px 10px 5px;
+  border-bottom: 1px dashed #002B67;
+}
+
+.graph-button {
+  position: relative;
+  display: inline-block;
+  border: 3px solid #eee;
+  margin: 4px 4px 4px 4px;
+  height: 48px;
+  width: 70px;
+}
+
+.graph-button.active {
+  border: 3px solid #002B67;
+}
+
+.container-subgraphs {
+  display: block;
+  padding: 10px 5px 10px 5px;
+}
+
+.container-subgraphs > div {
+  display: none;
+}
+
+.container-subgraphs > div.active {
+  display: block;
+}
